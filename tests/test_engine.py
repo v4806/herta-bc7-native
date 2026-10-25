@@ -106,7 +106,7 @@ class EngineTests(unittest.TestCase):
             for mode in ('similarity', 'pixels'):
                 method = (lambda data: self.engine.pool_dds(data, 7)) if mode == 'similarity' else self.engine.fingerprint_dds
                 expected = [(path, method(path.read_bytes())) for path in paths]
-                for workers in (2, 4, 8, 16):
+                for workers in (2, 4, 8, 16, 32, 64, 128):
                     with self.subTest(mode=mode, workers=workers):
                         requested = []
 

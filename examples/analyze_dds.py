@@ -12,7 +12,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('paths', nargs='+', type=Path)
     parser.add_argument('--mode', choices=['similarity', 'pixels'], default='similarity')
-    parser.add_argument('--workers', type=int, default=4)
+    parser.add_argument('--workers', type=int, default=16)
     parser.add_argument('--grid', type=int, default=64)
     args = parser.parse_args()
     engine = BC7Engine()

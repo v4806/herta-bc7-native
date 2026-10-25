@@ -124,7 +124,7 @@ class BC7Engine:
             raise ValueError('Native BC7 pooling rejected input')
         return RGBThumbnail(ow, oh, tuple(output))
 
-    def analyze_files(self, paths, *, mode='similarity', workers=4, grid=64):
+    def analyze_files(self, paths, *, mode='similarity', workers=16, grid=64):
         """Yield (Path, result) in input order, with at most workers jobs active.
 
         similarity uses fused pooling; pixels uses full decode + fingerprint.
