@@ -98,3 +98,8 @@ regeneration instructions are in `tests/fixtures/README.md`.
 ## License and attribution
 
 This repository is distributed under GPL-3.0-or-later. The BC7 decoding logic follows the BPTC specification and a scalar reference implementation adapted from the bimg project. See the TheHerta4 project for the original NumPy reference and integration.
+
+## TheHerta4 complete native source bundle
+
+See [addon_native](addon_native/README.md) for the five production module sources,
+pinned dependencies, CMake build and production binary SHA256 manifest.

@@ -1,0 +1,67 @@
+{
+  "source_files": {
+    "CMakeLists.txt": {
+      "sha256": "a792129e42f9e0f2a6adadb6ca5ebde3948d69109be525f369df6028459642f3",
+      "bytes": 816
+    },
+    "dds_decode.c": {
+      "sha256": "8a6592178d9825515c9b06fd6c1bf341c86a9ba241441964bc80e11adac094f9",
+      "bytes": 6709
+    },
+    "dds_tables.h": {
+      "sha256": "cb01f466cb0778f14c6a9b1acf83b740d7cc9959df0fb5bac7279bb3c85fc745",
+      "bytes": 2532
+    },
+    "export_geometry.cpp": {
+      "sha256": "e459a33376d531b2d12ee3d074b9b12aad03d5a8c52337538682eb1d1e7111cb",
+      "bytes": 6291
+    },
+    "geometry_pack.c": {
+      "sha256": "bf7a3ae2b4f3e7f79b380365f09a64064843203e3b3d88534ef8a6c7ae82a9bb",
+      "bytes": 1471
+    },
+    "README.md": {
+      "sha256": "24ce28a58dd70f1c392331d63d5576cb9301f85998da678a7ffc6dc31964d561",
+      "bytes": 1111
+    },
+    "bc7f/bc7f_bridge.cpp": {
+      "sha256": "0c4154edd33048e046cb6823072a4ec1596073b0faf7069bff25b76258fd24f4",
+      "bytes": 1968
+    },
+    "bc7f/CMakeLists.txt": {
+      "sha256": "63a406b37f758828cd7b9e06676d91c6eed1400441d0632ae2f73df7040a4dbb",
+      "bytes": 1531
+    },
+    "bc7f/LICENSE_BASIS.txt": {
+      "sha256": "065fcf48d6af21c0b75e23be5ed5753aee75c892e1c2cf178fa6736305614a5c",
+      "bytes": 11347
+    },
+    "bc7f/NOTICE_BASIS.txt": {
+      "sha256": "a710c77f53231533f19fbc00e04a7109077f2dec74232b62a96f2ac1a1c04c85",
+      "bytes": 998
+    },
+    "bc7f/pipeline.cpp": {
+      "sha256": "ed28f97e7f4d5870afff7b5ecee14c8b4da616456fd07e2c35401b2af7012633",
+      "bytes": 9201
+    },
+    "bc7f/png_analysis.cpp": {
+      "sha256": "d72ed2b025c342d01eb6434c3189465ced76de910cbd7dcf253180320ac8b937",
+      "bytes": 2366
+    },
+    "bc7f/stb_image.h": {
+      "sha256": "594c2fe35d49488b4382dbfaec8f98366defca819d916ac95becf3e75f4200b3",
+      "bytes": 283010
+    },
+    "export_geometry/CMakeLists.txt": {
+      "sha256": "5bec151b4a3d4fec13728e85fa8e0ceb6bda7cb6959cf78f6ea823fe97e2ec94",
+      "bytes": 569
+    }
+  },
+  "production_binaries": {
+    "common/native/herta_dds_windows_x64.dll": "97f3589440658bf18cc15cd7118fac61db8d04da9d51f993a6754f9a25995544",
+    "common/native/herta_export_geometry_windows_x64.dll": "2ecbef44021f87d4a4fafb30ea79b32799716eaf5015284f56d068b0a2291869",
+    "common/native/herta_geometry_windows_x64.dll": "120a632c49f4ddf552f0902b82a525d61f48d2965830e474a84a15e0a3911d46",
+    "common/native/bc7f/herta_png_analysis_windows_x64.dll": "62a99bf1aeff66158c76d20b006bdde3abf80f7384ed748b77b31f608a2ca936",
+    "common/native/bc7f/herta_texture_windows_x64.dll": "66cc67fc905acf690dc2667a46fc71de2067938c8bb31beb129850bf702824fa"
+  }
+}
