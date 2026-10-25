@@ -106,17 +106,20 @@ class EngineTests(unittest.TestCase):
             for mode in ('similarity', 'pixels'):
                 method = (lambda data: self.engine.pool_dds(data, 7)) if mode == 'similarity' else self.engine.fingerprint_dds
                 expected = [(path, method(path.read_bytes())) for path in paths]
-                requested = []
+                for workers in (2, 4, 8, 16):
+                    with self.subTest(mode=mode, workers=workers):
+                        requested = []
 
-                def source():
-                    for path in paths:
-                        requested.append(path)
-                        yield path
+                        def source():
+                            for path in paths:
+                                requested.append(path)
+                                yield path
 
-                results = self.engine.analyze_files(source(), mode=mode, workers=2, grid=7)
-                first = next(results)
-                self.assertEqual(len(requested), 2)
-                self.assertEqual([first] + list(results), expected)
+                        results = self.engine.analyze_files(
+                            source(), mode=mode, workers=workers, grid=7)
+                        first = next(results)
+                        self.assertEqual(len(requested), min(workers, len(paths)))
+                        self.assertEqual([first] + list(results), expected)
 
     def test_batch_errors_are_not_treated_as_duplicates(self):
         with self.assertRaises(FileNotFoundError):

@@ -12,7 +12,7 @@ The Windows x64 DLL is standalone: it has no Python ABI, third-party DLL, or C r
 | 像素级精确去重 | `fingerprint_dds(data)` | C 完整解码 RGBA，直接对原生输出缓冲区计算 SHA256，包含 alpha；尺寸也参与结果比较 |
 | 需要完整像素 | `decode_dds(data)` | 返回尺寸和完整 RGBA8 字节 |
 
-两条路径都通过同一个可重入 DLL 执行。Python 的 `ctypes.CDLL` 调用期间释放 GIL，`analyze_files` 默认使用 2 个线程，最多保留同样数量的在途任务，并按输入顺序返回结果。C 内部不再额外创建线程。
+两条路径都通过同一个可重入 DLL 执行。Python 的 `ctypes.CDLL` 调用期间释放 GIL，`analyze_files` 默认使用 4 个线程，最多保留同样数量的在途任务，并按输入顺序返回结果。可以显式指定 `workers=8`、`workers=16` 或其它正整数。C 内部不再额外创建线程。
 
 相似度接口输出 RGB 均值，范围为 0..255；它不自行判断相似度或修改阈值。接入方继续应用自己的特征计算、相似度指标和阈值。所有基础 mip 像素均参与计算；不使用抽样或较小 mip。sRGB 标志不触发颜色变换，以保留参考实现的数值语义。
 
@@ -32,10 +32,10 @@ image = engine.decode_dds(data)                 # optional full RGBA8 pixels
 
 # Results retain input order. Both modes use bounded native parallel calls.
 for path, result in engine.analyze_files(
-        ["a.dds", "b.dds"], mode="similarity", workers=2):
+        ["a.dds", "b.dds"], mode="similarity", workers=4):
     print(path, result.width, result.height)
 for path, result in engine.analyze_files(
-        ["a.dds", "b.dds"], mode="pixels", workers=2):
+        ["a.dds", "b.dds"], mode="pixels", workers=4):
     print(path, result.sha256)
 ```
 
@@ -44,9 +44,24 @@ for path, result in engine.analyze_files(
 Command-line examples:
 
 ```powershell
-python examples/analyze_dds.py --mode similarity --workers 2 a.dds b.dds
-python examples/analyze_dds.py --mode pixels --workers 2 a.dds b.dds
+python examples/analyze_dds.py --mode similarity --workers 8 a.dds b.dds
+python examples/analyze_dds.py --mode pixels --workers 4 a.dds b.dds
 ```
+
+2026-10-25 的本机测试：Windows、6 个物理核心、61 张 BC7、每组独立进程测试
+3 次。下表是文件读取、引擎运算和结果校验摘要的耗时中位数；内存为各组最大
+进程工作集峰值，不是 Blender 的内存占用。文件系统缓存可能已预热，不能外推为
+整次导出耗时。每种并发数的 61 项结果均一致。
+
+| 线程数 | 相似度路径 | 其内存峰值 | 像素指纹路径 | 其内存峰值 |
+|---:|---:|---:|---:|---:|
+| 2 | 2.608 s | 48.4 MiB | 3.456 s | 78.6 MiB |
+| 4 | 1.569 s | 68.8 MiB | 1.780 s | 129.3 MiB |
+| 6 | 1.410 s | 87.4 MiB | 1.484 s | 180.0 MiB |
+| 8 | 1.424 s | 106.9 MiB | 1.665 s | 230.6 MiB |
+| 16 | 1.133 s | 168.5 MiB | 1.397 s | 384.1 MiB |
+
+默认选用 4 线程兼顾耗时和内存；8、16 线程适合调用方在目标机器上测量后选择。
 
 ## C ABI
 
