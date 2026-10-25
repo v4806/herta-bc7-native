@@ -1,0 +1,61 @@
+{
+  "basis_commit": "ee771a7f913a3233a252eb6d281b4446f6a3c9f5",
+  "stb_file_git_blob": "9eedabedc45b3e6fd88fae6f14a160b4d53272ec",
+  "prebuilt_cpu": "Windows x64 AVX2",
+  "production_status": "experimental, not connected to TheHerta4 exporter",
+  "files": [
+    {
+      "file": "bc7f_bridge.cpp",
+      "sha256": "0c4154edd33048e046cb6823072a4ec1596073b0faf7069bff25b76258fd24f4"
+    },
+    {
+      "file": "benchmark_worker.py",
+      "sha256": "da990f5a832b514550c3938d95376d0151fa31e5660b63d712852cb132a65745"
+    },
+    {
+      "file": "CMakeLists.txt",
+      "sha256": "474dc3284aebfa73e2f1d906877d9675d2a015324286e4d84d9478eaf3406f99"
+    },
+    {
+      "file": "dds_artifact_cache.py",
+      "sha256": "c3c2cc8c0600455a79abd81a199b6812f3aaa28ee90634afc8780c58f66ce147"
+    },
+    {
+      "file": "herta_pipeline.py",
+      "sha256": "0a944b7fb3b7e10f1da0a47ce8d96c7e95566d35db81417f9be557640655b836"
+    },
+    {
+      "file": "herta_pipeline_windows_x64.dll",
+      "sha256": "01b4c1da9101a0d013ef6afd5d6d77594df589cb895e49efbac3a3e505b75f9b"
+    },
+    {
+      "file": "LICENSE_BASIS.txt",
+      "sha256": "065fcf48d6af21c0b75e23be5ed5753aee75c892e1c2cf178fa6736305614a5c"
+    },
+    {
+      "file": "NOTICE_BASIS.txt",
+      "sha256": "a710c77f53231533f19fbc00e04a7109077f2dec74232b62a96f2ac1a1c04c85"
+    },
+    {
+      "file": "pipeline.cpp",
+      "sha256": "36e0b6136ff2880f0a130748b0b983305cdcafb93c72e30e7b8de53b3e2f0d51"
+    },
+    {
+      "file": "README.md",
+      "sha256": "cd2a8c4e52ad43d16ef658c090f6eb634bf899e8d4ba5c9e21296003d900f79e"
+    },
+    {
+      "file": "stb_image.h",
+      "sha256": "594c2fe35d49488b4382dbfaec8f98366defca819d916ac95becf3e75f4200b3"
+    },
+    {
+      "file": "test_cached_pipeline.py",
+      "sha256": "267a38f7504bb13b77a1c509a1265a480ec5ba6638ffcf2a68f0ea52879d67e0"
+    },
+    {
+      "file": "test_pipeline.py",
+      "sha256": "c748c8293e8a60b91bcaf012ee295619cdd46ad4bc974f13f46e2f97416a02a6"
+    }
+  ],
+  "cache_integration": "Persistent content+recipe keyed DDS artifacts; native encoder remains experimental."
+}

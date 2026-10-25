@@ -3,3 +3,7 @@ __pycache__/
 *.obj
 *.exp
 *.lib
+# 实验目录的编译产物/日志留在本机；生产 DLL 随 TheHerta4 发布
+experiments/**/*.dll
+experiments/**/build.log
+*.log

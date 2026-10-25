@@ -1,0 +1,130 @@
+{
+  "scope": "Synthetic RNA-like Python objects, 8 x 120000 vertices, sparse 4 influences, 2 UV layers; not actual Blender RNA or full export. Hashes verified against unchanged original stream.",
+  "counts": {
+    "objects": 8,
+    "vertices": 960000,
+    "weights": 2560000
+  },
+  "summary": [
+    {
+      "method": "legacy",
+      "extract_s": 0.734896899999967,
+      "hash_s": 3.1814734000000726,
+      "total_s": 3.8968304000001126
+    },
+    {
+      "method": "packed_fallback",
+      "extract_s": 0.6279962999999498,
+      "hash_s": 1.0406060000000252,
+      "total_s": 1.6690762000000632
+    },
+    {
+      "method": "packed_native",
+      "extract_s": 0.6380517000000054,
+      "hash_s": 0.37693530000001374,
+      "total_s": 1.0183660000000145
+    },
+    {
+      "method": "packed_parallel",
+      "extract_s": 0.6243654999999535,
+      "hash_s": 0.07944810000003599,
+      "total_s": 0.7043635999999651
+    }
+  ],
+  "thread_scan": [
+    {
+      "workers": 1,
+      "median_hash_s": 0.37629839999999604
+    },
+    {
+      "workers": 4,
+      "median_hash_s": 0.09864549999997507
+    },
+    {
+      "workers": 8,
+      "median_hash_s": 0.07659560000001875
+    },
+    {
+      "workers": 16,
+      "median_hash_s": 0.07261899999991783
+    },
+    {
+      "workers": 32,
+      "median_hash_s": 0.07424879999996392
+    }
+  ],
+  "runs": [
+    {
+      "method": "packed_fallback",
+      "extract_s": 0.6206709000000501,
+      "hash_s": 1.0406060000000252,
+      "total_s": 1.6612769000000753
+    },
+    {
+      "method": "packed_native",
+      "extract_s": 0.6357024999999794,
+      "hash_s": 0.38266350000003513,
+      "total_s": 1.0183660000000145
+    },
+    {
+      "method": "legacy",
+      "extract_s": 0.7358317000000625,
+      "hash_s": 3.1264609000000974,
+      "total_s": 3.86229260000016
+    },
+    {
+      "method": "packed_fallback",
+      "extract_s": 0.6350459000000228,
+      "hash_s": 1.0340303000000404,
+      "total_s": 1.6690762000000632
+    },
+    {
+      "method": "packed_native",
+      "extract_s": 0.6380517000000054,
+      "hash_s": 0.373528599999986,
+      "total_s": 1.0115802999999914
+    },
+    {
+      "method": "legacy",
+      "extract_s": 0.71535700000004,
+      "hash_s": 3.1814734000000726,
+      "total_s": 3.8968304000001126
+    },
+    {
+      "method": "legacy",
+      "extract_s": 0.734896899999967,
+      "hash_s": 3.1830455000000484,
+      "total_s": 3.9179424000000154
+    },
+    {
+      "method": "packed_parallel",
+      "extract_s": 0.6426781999999776,
+      "hash_s": 0.07944810000003599,
+      "total_s": 0.7221263000000135
+    },
+    {
+      "method": "packed_fallback",
+      "extract_s": 0.6279962999999498,
+      "hash_s": 1.0429312999999638,
+      "total_s": 1.6709275999999136
+    },
+    {
+      "method": "packed_parallel",
+      "extract_s": 0.6144767000000684,
+      "hash_s": 0.07704549999994015,
+      "total_s": 0.6915222000000085
+    },
+    {
+      "method": "packed_parallel",
+      "extract_s": 0.6243654999999535,
+      "hash_s": 0.07999810000001162,
+      "total_s": 0.7043635999999651
+    },
+    {
+      "method": "packed_native",
+      "extract_s": 0.6907982999999831,
+      "hash_s": 0.37693530000001374,
+      "total_s": 1.0677335999999968
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "date": "2026-10-25",
+  "status": "Experimental memory pipeline; not installed as production encoder.",
+  "scope": "61 real inputs, each run fresh process, shuffled order; memory decode+mips+encode+file I/O+SHA256; warm file cache possible. Every full DDS digest equals the corrected v2 reference.",
+  "worker_scan": [
+    {
+      "workers": 4,
+      "repeats": 3,
+      "median_wall_s": 5.168901500001084,
+      "median_cpu_s": 12.046875,
+      "peak_working_set_MiB": 286.94921875
+    },
+    {
+      "workers": 8,
+      "repeats": 3,
+      "median_wall_s": 4.806954000028782,
+      "median_cpu_s": 12.09375,
+      "peak_working_set_MiB": 392.03515625
+    },
+    {
+      "workers": 16,
+      "repeats": 3,
+      "median_wall_s": 4.684396199998446,
+      "median_cpu_s": 12.421875,
+      "peak_working_set_MiB": 611.26953125
+    },
+    {
+      "workers": 24,
+      "repeats": 3,
+      "median_wall_s": 4.923916400002781,
+      "median_cpu_s": 12.9375,
+      "peak_working_set_MiB": 746.765625
+    },
+    {
+      "workers": 32,
+      "repeats": 3,
+      "median_wall_s": 5.032672600005753,
+      "median_cpu_s": 12.640625,
+      "peak_working_set_MiB": 742.66796875
+    }
+  ],
+  "runs": [
+    {
+      "workers": 4,
+      "files": 61,
+      "wall_s": 5.168901500001084,
+      "process_cpu_s": 12.015625,
+      "peak_working_set_MiB": 276.2421875,
+      "cumulative_stage_wall_s": {
+        "decode_s": 4.8216454,
+        "mip_s": 3.1063511,
+        "encode_s": 6.6409246
+      }
+    },
+    {
+      "workers": 4,
+      "files": 61,
+      "wall_s": 6.2165883999550715,
+      "process_cpu_s": 12.75,
+      "peak_working_set_MiB": 286.94921875,
+      "cumulative_stage_wall_s": {
+        "decode_s": 5.8740162,
+        "mip_s": 3.9775175,
+        "encode_s": 7.9584405
+      }
+    },
+    {
+      "workers": 32,
+      "files": 61,
+      "wall_s": 5.032672600005753,
+      "process_cpu_s": 13.203125,
+      "peak_working_set_MiB": 622.640625,
+      "cumulative_stage_wall_s": {
+        "decode_s": 14.3883396,
+        "mip_s": 11.0059722,
+        "encode_s": 21.0193334
+      }
+    },
+    {
+      "workers": 24,
+      "files": 61,
+      "wall_s": 4.923916400002781,
+      "process_cpu_s": 12.9375,
+      "peak_working_set_MiB": 642.84375,
+      "cumulative_stage_wall_s": {
+        "decode_s": 15.7940835,
+        "mip_s": 11.4849608,
+        "encode_s": 24.4803995
+      }
+    },
+    {
+      "workers": 16,
+      "files": 61,
+      "wall_s": 5.115350399981253,
+      "process_cpu_s": 12.421875,
+      "peak_working_set_MiB": 545.48828125,
+      "cumulative_stage_wall_s": {
+        "decode_s": 16.2565362,
+        "mip_s": 9.8500194,
+        "encode_s": 22.8391202
+      }
+    },
+    {
+      "workers": 4,
+      "files": 61,
+      "wall_s": 4.657267300004605,
+      "process_cpu_s": 12.046875,
+      "peak_working_set_MiB": 286.6875,
+      "cumulative_stage_wall_s": {
+        "decode_s": 4.0931987,
+        "mip_s": 2.7290378,
+        "encode_s": 6.0298261
+      }
+    },
+    {
+      "workers": 24,
+      "files": 61,
+      "wall_s": 4.213929999968968,
+      "process_cpu_s": 12.59375,
+      "peak_working_set_MiB": 746.765625,
+      "cumulative_stage_wall_s": {
+        "decode_s": 14.146308,
+        "mip_s": 10.1781598,
+        "encode_s": 19.2943704
+      }
+    },
+    {
+      "workers": 8,
+      "files": 61,
+      "wall_s": 4.731255300051998,
+      "process_cpu_s": 12.09375,
+      "peak_working_set_MiB": 369.96484375,
+      "cumulative_stage_wall_s": {
+        "decode_s": 8.4983028,
+        "mip_s": 5.2506733,
+        "encode_s": 11.5291633
+      }
+    },
+    {
+      "workers": 16,
+      "files": 61,
+      "wall_s": 4.684396199998446,
+      "process_cpu_s": 13.328125,
+      "peak_working_set_MiB": 611.26953125,
+      "cumulative_stage_wall_s": {
+        "decode_s": 14.6898997,
+        "mip_s": 9.8726571,
+        "encode_s": 20.2964231
+      }
+    },
+    {
+      "workers": 32,
+      "files": 61,
+      "wall_s": 5.219765800051391,
+      "process_cpu_s": 12.640625,
+      "peak_working_set_MiB": 673.05078125,
+      "cumulative_stage_wall_s": {
+        "decode_s": 17.9269925,
+        "mip_s": 10.5940368,
+        "encode_s": 24.0381277
+      }
+    },
+    {
+      "workers": 8,
+      "files": 61,
+      "wall_s": 4.806954000028782,
+      "process_cpu_s": 12.046875,
+      "peak_working_set_MiB": 346.0078125,
+      "cumulative_stage_wall_s": {
+        "decode_s": 8.8968252,
+        "mip_s": 5.3507263,
+        "encode_s": 12.677031
+      }
+    },
+    {
+      "workers": 24,
+      "files": 61,
+      "wall_s": 5.173294099979103,
+      "process_cpu_s": 13.296875,
+      "peak_working_set_MiB": 648.453125,
+      "cumulative_stage_wall_s": {
+        "decode_s": 19.1797439,
+        "mip_s": 13.2941064,
+        "encode_s": 26.1699615
+      }
+    },
+    {
+      "workers": 16,
+      "files": 61,
+      "wall_s": 4.448088800010737,
+      "process_cpu_s": 12.0625,
+      "peak_working_set_MiB": 576.41015625,
+      "cumulative_stage_wall_s": {
+        "decode_s": 13.9142666,
+        "mip_s": 8.7583098,
+        "encode_s": 20.2629454
+      }
+    },
+    {
+      "workers": 32,
+      "files": 61,
+      "wall_s": 4.228419700055383,
+      "process_cpu_s": 12.453125,
+      "peak_working_set_MiB": 742.66796875,
+      "cumulative_stage_wall_s": {
+        "decode_s": 13.0087949,
+        "mip_s": 9.4937455,
+        "encode_s": 19.2357847
+      }
+    },
+    {
+      "workers": 8,
+      "files": 61,
+      "wall_s": 4.850211599958129,
+      "process_cpu_s": 12.390625,
+      "peak_working_set_MiB": 392.03515625,
+      "cumulative_stage_wall_s": {
+        "decode_s": 8.1921692,
+        "mip_s": 5.6136007,
+        "encode_s": 12.5393081
+      }
+    }
+  ],
+  "validation": {
+    "files": 61,
+    "base_decode_identical": 61,
+    "base_bc7_identical": 61,
+    "max_raw_mip_error": [
+      9,
+      9,
+      2,
+      2
+    ],
+    "max_raw_mip_mean_error": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "min_all_mip_rgb_psnr_against_previous_raw_reference": 40.70331876412088
+  },
+  "unit_test_groups_passed": 5,
+  "serial_stage_profile": {
+    "workers": 1,
+    "files": 61,
+    "wall_s": 13.23089439998148,
+    "process_cpu_s": 12.125,
+    "peak_working_set_MiB": 105.35546875,
+    "cumulative_stage_wall_s": {
+      "decode_s": 3.0190535,
+      "mip_s": 1.9028677,
+      "encode_s": 4.3964783
+    }
+  },
+  "selected_workers": 16,
+  "full_dds_sha256_identical_all_15_runs": true,
+  "inherited_base_min_similarity": 0.9921061197916666,
+  "inherited_98_percent_pass_count": 61,
+  "previous_prototype_s": 21.847596299950965,
+  "input_assets_included": false,
+  "limitations": [
+    "Only 61 BC7 sources, not entire 73-texture export.",
+    "Warm filesystem caches possible; comparison to preceding prototype not interleaved.",
+    "Base RGBA and BC7 match previous prototype; raw mips have small rounding differences.",
+    "No integrated Blender export or in-game validation in this run.",
+    "Native per-task stage times are wall times, not CPU times; summing them double-counts concurrency."
+  ]
+}

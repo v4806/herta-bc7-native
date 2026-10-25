@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-25",
+  "status": "experimental; not installed as production encoder",
+  "hardware": {
+    "os": "Windows x64",
+    "physical_cpu_cores": 6,
+    "memory_GiB": 31.63,
+    "gpu": "RTX 2060"
+  },
+  "full_mip_test": {
+    "source_count": 61,
+    "workers": 16,
+    "timings": {
+      "gpu_full_pipeline_s": 89.32242299988866,
+      "input_normalize_s": 0.8486207999521866,
+      "rgba_mip_preparation_s": 16.683538599987514,
+      "native_read_encode_write_s": 4.315436900011264,
+      "bc7f_full_pipeline_s": 21.847596299950965
+    },
+    "source_color_groups": {
+      "False": 49,
+      "True": 12
+    },
+    "quality_summary": [
+      {
+        "encoder": "texconv_gpu",
+        "files": 61,
+        "min_base_similarity": 0.9973958333333334,
+        "pass_current_98_percent": 61,
+        "min_base_rgb_psnr": 45.11737775229261,
+        "min_all_mip_rgb_psnr": 41.84835903124955,
+        "min_all_mip_alpha_psnr": 48.31877006319387,
+        "max_base_alpha_error": 66
+      },
+      {
+        "encoder": "bc7f_partial",
+        "files": 61,
+        "min_base_similarity": 0.9921061197916666,
+        "pass_current_98_percent": 61,
+        "min_base_rgb_psnr": 42.94157057173942,
+        "min_all_mip_rgb_psnr": 40.703101769716774,
+        "min_all_mip_alpha_psnr": 49.19822836207391,
+        "max_base_alpha_error": 86
+      }
+    ],
+    "gpu_reference_matches_original_export_sha256": 61,
+    "scope": "Reuses the previous identical 61-image GPU reference. Native pipeline includes measured input alias preparation, two source-aware RGBA/mip batches, 16-thread BC7f encoding, all DDS writes. Timing is a single run, not an integrated Blender export."
+  },
+  "ispc_base_only": {
+    "scope": "base mip only; native encoding only, decoded inputs already resident",
+    "summary": [
+      {
+        "encoder": "ispc_adaptive_veryfast",
+        "files": 6,
+        "workers_1_s": 10.61687799997162,
+        "workers_6_s": 2.4716913999873213,
+        "min_rgb_psnr": 47.220215467223966,
+        "min_alpha_psnr": 51.588629782476175,
+        "min_similarity": 0.9983723958333334,
+        "max_alpha_error": 41,
+        "parallel_bytes_identical": true
+      },
+      {
+        "encoder": "ispc_adaptive_fast",
+        "files": 6,
+        "workers_1_s": 18.24824390001595,
+        "workers_6_s": 4.749733200005721,
+        "min_rgb_psnr": 47.241193170320415,
+        "min_alpha_psnr": 51.584107397710255,
+        "min_similarity": 0.9983723958333334,
+        "max_alpha_error": 52,
+        "parallel_bytes_identical": true
+      },
+      {
+        "encoder": "ispc_adaptive_basic",
+        "files": 6,
+        "workers_1_s": 41.29854220000561,
+        "workers_6_s": 9.86532789998455,
+        "min_rgb_psnr": 47.47453733594248,
+        "min_alpha_psnr": 51.26441054329288,
+        "min_similarity": 0.9982096354166666,
+        "max_alpha_error": 52,
+        "parallel_bytes_identical": true
+      }
+    ]
+  },
+  "bc7f_base_only": {
+    "scope": "base mip only; resident RGBA native encoding times",
+    "summary": [
+      {
+        "encoder": "bc7f_fast",
+        "files": 6,
+        "workers_1_s": 0.2692129000206478,
+        "workers_6_s": 0.12990800000261515,
+        "min_rgb_psnr": 46.22854604340749,
+        "min_alpha_psnr": 49.82823986797683,
+        "min_similarity": 0.996826171875,
+        "max_alpha_error": 65,
+        "opaque_alpha_changed": 0,
+        "parallel_bytes_identical": true
+      },
+      {
+        "encoder": "bc7f_default",
+        "files": 6,
+        "workers_1_s": 0.2859024000354111,
+        "workers_6_s": 0.149654200009536,
+        "min_rgb_psnr": 46.22854604340749,
+        "min_alpha_psnr": 49.82823986797683,
+        "min_similarity": 0.996826171875,
+        "max_alpha_error": 65,
+        "opaque_alpha_changed": 0,
+        "parallel_bytes_identical": true
+      },
+      {
+        "encoder": "bc7f_partially_analytical",
+        "files": 6,
+        "workers_1_s": 0.563944099994842,
+        "workers_6_s": 0.22448629996506497,
+        "min_rgb_psnr": 46.453488636236635,
+        "min_alpha_psnr": 50.40155644465415,
+        "min_similarity": 0.9974772135416666,
+        "max_alpha_error": 55,
+        "opaque_alpha_changed": 0,
+        "parallel_bytes_identical": true
+      },
+      {
+        "encoder": "bc7f_mode6_only",
+        "files": 6,
+        "workers_1_s": 0.3050655000261031,
+        "workers_6_s": 0.11158899997826666,
+        "min_rgb_psnr": 45.58453569199816,
+        "min_alpha_psnr": 47.98346111278448,
+        "min_similarity": 0.996826171875,
+        "max_alpha_error": 105,
+        "opaque_alpha_changed": 0,
+        "parallel_bytes_identical": true
+      }
+    ]
+  },
+  "contract_tests": {
+    "dimension_cases": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        31,
+        17
+      ],
+      [
+        64,
+        64
+      ]
+    ],
+    "concurrent_calls_per_case": 32,
+    "invalid_cases": 6,
+    "result": "pass"
+  },
+  "limitations": [
+    "Single-run full pipeline timings; GPU reference reused for source-aware retest.",
+    "Input-normalization stage reused from preceding identical-input measurement.",
+    "RGB similarity does not validate alpha, material data or in-game appearance.",
+    "Only 61 BC7 files; excludes 12 uncompressed files from the 73-texture export.",
+    "Not an integrated Blender export; no overall-export speedup claim."
+  ]
+}

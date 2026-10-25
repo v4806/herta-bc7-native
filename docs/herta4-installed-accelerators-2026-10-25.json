@@ -1,0 +1,117 @@
+{
+  "work": "C:\\Users\\master\\AppData\\Local\\Temp\\herta_promoted_export_73_ur7fs3pw",
+  "scope": "Installed single/batch export converter, original project 61 BC7 + 12 RGBA8 PNG sources, isolated empty targets. Not a full Blender export.",
+  "rounds": [
+    {
+      "phase": "cold",
+      "files": 73,
+      "wall_s": 11.603228200000103,
+      "texconv_calls": 1,
+      "texconv_formats": [
+        "r8g8b8a8_unorm"
+      ]
+    },
+    {
+      "phase": "warm",
+      "files": 73,
+      "wall_s": 1.865094499999941,
+      "texconv_calls": 0,
+      "texconv_formats": []
+    }
+  ],
+  "base_bc7_identical_previous_prototype": 61,
+  "full_dds_identical_previous_prototype": 60,
+  "uncompressed_matches_original_export": 12,
+  "backend": {
+    "available": true,
+    "reason": "",
+    "encoder_sha256": "66cc67fc905acf690dc2667a46fc71de2067938c8bb31beb129850bf702824fa",
+    "cpu": "x64 SSE2 baseline"
+  },
+  "linear_mip_validation": {
+    "files_checked": 1,
+    "reason": "UNORM ignores source PNG sRGB metadata, matching existing texconv flags",
+    "mips": 3,
+    "max_rgba_error": 0,
+    "max_channel_mean_error": 0
+  },
+  "installed_root": "D:\\Program Files\\Blender Foundation\\scripts\\addons\\TheHerta4-main",
+  "installed_files": [
+    {
+      "path": "toolkit/tt_dds_conversion.py",
+      "sha256": "a7088145fb2a228bea745a662c143445c0dc9d267477352ce2789fb10a95e276"
+    },
+    {
+      "path": "toolkit/dds_native_encoder.py",
+      "sha256": "ce324a700ec168b6eecaf6892cebefefbf08b9d125d1b1ba5c362d7c4927cd59"
+    },
+    {
+      "path": "toolkit/dds_artifact_cache.py",
+      "sha256": "c3c2cc8c0600455a79abd81a199b6812f3aaa28ee90634afc8780c58f66ce147"
+    },
+    {
+      "path": "common/texture_export_plan.py",
+      "sha256": "8283d22e792c9b3882caee7325faf7dc2204aab572afbeddfba7ca5b74377da0"
+    },
+    {
+      "path": "common/dds_pixel.py",
+      "sha256": "0c87bb47a46ae0b3c2ef71f4f8742d8ffe7d79890c6d9f12e5d815d8c091576d"
+    },
+    {
+      "path": "common/geometry_hash.py",
+      "sha256": "925bd718d938b76567d909d286adbdd7af3a37613d6ac2a314a745c51a0a8453"
+    },
+    {
+      "path": "common/submesh_model.py",
+      "sha256": "b00fcec7baac77934146286078540d25f73f50874e263ad3f008cd7ff12a9725"
+    },
+    {
+      "path": "utils/export_utils.py",
+      "sha256": "e408b72ba453d70f95357aafc7a58bed959d35ffec50fddce26f03968d7ebb74"
+    },
+    {
+      "path": "common/native/herta_dds_windows_x64.dll",
+      "sha256": "97f3589440658bf18cc15cd7118fac61db8d04da9d51f993a6754f9a25995544"
+    },
+    {
+      "path": "common/native/herta_geometry_windows_x64.dll",
+      "sha256": "120a632c49f4ddf552f0902b82a525d61f48d2965830e474a84a15e0a3911d46"
+    },
+    {
+      "path": "common/native/bc7f/herta_texture_windows_x64.dll",
+      "sha256": "66cc67fc905acf690dc2667a46fc71de2067938c8bb31beb129850bf702824fa"
+    },
+    {
+      "path": "common/native/bc7f/pipeline.cpp",
+      "sha256": "ed28f97e7f4d5870afff7b5ecee14c8b4da616456fd07e2c35401b2af7012633"
+    },
+    {
+      "path": "common/native/bc7f/bc7f_bridge.cpp",
+      "sha256": "0c4154edd33048e046cb6823072a4ec1596073b0faf7069bff25b76258fd24f4"
+    },
+    {
+      "path": "common/native/bc7f/stb_image.h",
+      "sha256": "594c2fe35d49488b4382dbfaec8f98366defca819d916ac95becf3e75f4200b3"
+    }
+  ],
+  "defaults": {
+    "native_bc7_encoding": true,
+    "encoding_workers": 16,
+    "geometry_hash_workers": 8,
+    "dds_similarity_workers": 16,
+    "dds_pixel_workers": 32,
+    "artifact_cache_soft_budget_GiB": 8
+  },
+  "regression_tests_passed": 131,
+  "live_verification": {
+    "pid": 9028,
+    "blend": "",
+    "blueprints": [],
+    "native_encoder_available": true,
+    "geometry_native_available": true,
+    "decode_backend": "C-BC7",
+    "foreground_converter_reloaded": true,
+    "scene_changed": false,
+    "full_project_export_run": false
+  }
+}

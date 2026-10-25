@@ -1,0 +1,24 @@
+{
+  "abi": 1,
+  "platform": "Windows x64, no CRT dependencies, SSE2 baseline",
+  "blender_export_regression": "Not yet run on user project after integration",
+  "core_tests_passed": 32,
+  "extended_himi": {
+    "passed": 48,
+    "baseline_errors": 3
+  },
+  "files": [
+    {
+      "file": "geometry_hash.py",
+      "sha256": "925bd718d938b76567d909d286adbdd7af3a37613d6ac2a314a745c51a0a8453"
+    },
+    {
+      "file": "geometry_pack.c",
+      "sha256": "bf7a3ae2b4f3e7f79b380365f09a64064843203e3b3d88534ef8a6c7ae82a9bb"
+    },
+    {
+      "file": "native/herta_geometry_windows_x64.dll",
+      "sha256": "120a632c49f4ddf552f0902b82a525d61f48d2965830e474a84a15e0a3911d46"
+    }
+  ]
+}

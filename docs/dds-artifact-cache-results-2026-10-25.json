@@ -1,0 +1,81 @@
+{
+  "work": "C:\\Users\\master\\AppData\\Local\\Temp\\herta_dds_artifact_bench_r8h9i6qw",
+  "runs": [
+    {
+      "run": "cold",
+      "backend": "native",
+      "files": 61,
+      "wall_s": 4.174551899952348,
+      "native_hits": 0,
+      "encoder_subprocess_calls": 0,
+      "cache_bytes": 318788573,
+      "scope": "Actual project sources, isolated fresh target, same cache shared across fresh Python processes; full input read/hash and DDS writes included."
+    },
+    {
+      "run": "warm1",
+      "backend": "native",
+      "files": 61,
+      "wall_s": 1.8225548000191338,
+      "native_hits": 61,
+      "encoder_subprocess_calls": 0,
+      "cache_bytes": 318788573,
+      "scope": "Actual project sources, isolated fresh target, same cache shared across fresh Python processes; full input read/hash and DDS writes included."
+    },
+    {
+      "run": "warm2",
+      "backend": "native",
+      "files": 61,
+      "wall_s": 1.930953099974431,
+      "native_hits": 61,
+      "encoder_subprocess_calls": 0,
+      "cache_bytes": 318788573,
+      "scope": "Actual project sources, isolated fresh target, same cache shared across fresh Python processes; full input read/hash and DDS writes included."
+    },
+    {
+      "run": "cold",
+      "backend": "texconv",
+      "files": 61,
+      "wall_s": 43.95593070000177,
+      "native_hits": 0,
+      "encoder_subprocess_calls": 2,
+      "cache_bytes": 318788573,
+      "scope": "Actual project sources, isolated fresh target, same cache shared across fresh Python processes; full input read/hash and DDS writes included."
+    },
+    {
+      "run": "warm1",
+      "backend": "texconv",
+      "files": 61,
+      "wall_s": 1.104143299977295,
+      "native_hits": 0,
+      "encoder_subprocess_calls": 0,
+      "cache_bytes": 318788573,
+      "scope": "Actual project sources, isolated fresh target, same cache shared across fresh Python processes; full input read/hash and DDS writes included."
+    },
+    {
+      "run": "warm2",
+      "backend": "texconv",
+      "files": 61,
+      "wall_s": 1.1545064999954775,
+      "native_hits": 0,
+      "encoder_subprocess_calls": 0,
+      "cache_bytes": 318788573,
+      "scope": "Actual project sources, isolated fresh target, same cache shared across fresh Python processes; full input read/hash and DDS writes included."
+    }
+  ],
+  "all_warm_outputs_equal_cold": true,
+  "sha256_against_prior_baselines": {
+    "texconv": 61,
+    "native": 61
+  },
+  "production_integration": "Installed texconv single and batch conversion entry points; planner overwrite/dedup decisions unchanged.",
+  "validation": {
+    "artifact_cache_tests": 9,
+    "conversion_integration_tests": 7,
+    "existing_conversion_tests": 48,
+    "header_tests": 21,
+    "planner_tests": 17,
+    "native_interface_tests": 5,
+    "native_cache_tests": 4
+  },
+  "live_export_limitation": "No Blender process was running at validation time; no background Blender export was started."
+}
