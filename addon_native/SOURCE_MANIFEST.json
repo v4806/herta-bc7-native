@@ -1,12 +1,12 @@
 {
   "source_files": {
     "CMakeLists.txt": {
-      "sha256": "2286abf785e102c359ad74e8aee9ea4c1c19fa235b2ff36739cea78359bc2900",
-      "bytes": 1143
+      "sha256": "d7e07045d7144ac83a25ab983bda86dfe1a1a3e847436e98c613f41211325448",
+      "bytes": 1170
     },
     "dds_decode.c": {
-      "sha256": "8a6592178d9825515c9b06fd6c1bf341c86a9ba241441964bc80e11adac094f9",
-      "bytes": 6709
+      "sha256": "2412f5a67da78148a0b9ea35b93b0f9496b29fe65f18f671b63e20316e0520c1",
+      "bytes": 6969
     },
     "dds_tables.h": {
       "sha256": "cb01f466cb0778f14c6a9b1acf83b740d7cc9959df0fb5bac7279bb3c85fc745",
@@ -21,8 +21,8 @@
       "bytes": 1471
     },
     "README.md": {
-      "sha256": "264d0dfc1da0e9f8aeee64ab61ed44ffd1c863c28776145167fe53d5e6061482",
-      "bytes": 1416
+      "sha256": "e3dafd33b3fe84a2decc91990680d335be51211f2480b46c3223343d1e7d2191",
+      "bytes": 1842
     },
     "bc7f/bc7f_bridge.cpp": {
       "sha256": "0c4154edd33048e046cb6823072a4ec1596073b0faf7069bff25b76258fd24f4",
@@ -59,6 +59,206 @@
     "shapekey_sample.cpp": {
       "sha256": "dcbc80ad792f253fafdec3fee70b897e226f4f1e3088ad633b53c9a76dabdd6d",
       "bytes": 5742
+    },
+    "dds_png/CMakeLists.txt": {
+      "sha256": "9a1d09a4ce735b2801db00da99f627bd5b413094f60229f44078a2b44cc1a1a3",
+      "bytes": 832
+    },
+    "dds_png/herta_dds_png.c": {
+      "sha256": "2387fcefdc6b3b9c6ca3f0432a8f8c58ceeb4f3656a948fdaa34222b087fc8cb",
+      "bytes": 10927
+    },
+    "dds_png/README.md": {
+      "sha256": "80a41223fb5140cf2a5a0da17923a156c83464b36e248b06c6236dcb32a769d0",
+      "bytes": 1629
+    },
+    "dds_png/VALIDATION.md": {
+      "sha256": "568ff00d46777ecd78da3aafaa30e4345a5c97770a9606813faddc4b4ac8b367",
+      "bytes": 1955
+    },
+    "dds_png/vendor/PINS.json": {
+      "sha256": "190a23dad1494cc2ee7a6b2ca86eb16dcb320ce475ea6ecddde671a5a3a14b63",
+      "bytes": 279
+    },
+    "dds_png/vendor/bcdec/bcdec.h": {
+      "sha256": "134520764d96f70a27db814173616c89ad85db95fbd3328417c7a8c77e7ca189",
+      "bytes": 79434
+    },
+    "dds_png/vendor/bcdec/LICENSE": {
+      "sha256": "2414c782587f6e96661cb0d19d752432ddecfcc1a221b4cb12bc2253a54dc5ac",
+      "bytes": 2564
+    },
+    "dds_png/vendor/libdeflate/CMakeLists.txt": {
+      "sha256": "50737a179e235bcf54e4e111bb5298e44abc11507567414637e8ecc2b3024525",
+      "bytes": 16423
+    },
+    "dds_png/vendor/libdeflate/common_defs.h": {
+      "sha256": "fe0dfdb4dadf413fcac6d011f678e644127f2361fbf46181bafb4f6c4265814c",
+      "bytes": 21442
+    },
+    "dds_png/vendor/libdeflate/COPYING": {
+      "sha256": "4ad69099cb4374836fd27583d9991e2838cd86b6e4666ab26b2d32582c91e73a",
+      "bytes": 1078
+    },
+    "dds_png/vendor/libdeflate/libdeflate.h": {
+      "sha256": "1bb50a3ff8c6980c1031c0e9bb324cf99df51379fdca77a358644cca841765cc",
+      "bytes": 17157
+    },
+    "dds_png/vendor/libdeflate/README.md": {
+      "sha256": "176b573d2dcf42c4e7404946a54f4d7cefdd982bc075e7c95ac234069fee40ee",
+      "bytes": 12074
+    },
+    "dds_png/vendor/libdeflate/lib/adler32.c": {
+      "sha256": "63099826db3ddf84c15bfba30940f9689917185df8c30ff27a2bc2b7cb6a19f2",
+      "bytes": 5133
+    },
+    "dds_png/vendor/libdeflate/lib/bt_matchfinder.h": {
+      "sha256": "6e3834eb2de5c759479bbdab9471f3569f8aa2bcbba81f4f917c84ebff0050ad",
+      "bytes": 11499
+    },
+    "dds_png/vendor/libdeflate/lib/cpu_features_common.h": {
+      "sha256": "f4eb0800558e9116dd14446ccfb9b1896f970aec6de42c18366a29bde73fd0da",
+      "bytes": 2788
+    },
+    "dds_png/vendor/libdeflate/lib/crc32.c": {
+      "sha256": "91d0155e5e879527f9a5dbc53f01ea2400fbb80a75b9dda71d867cdd53d18cca",
+      "bytes": 9227
+    },
+    "dds_png/vendor/libdeflate/lib/crc32_multipliers.h": {
+      "sha256": "4685f86b4035627d81c802627d8148ac17861ede15d2af741f06c66022a4c4d0",
+      "bytes": 21861
+    },
+    "dds_png/vendor/libdeflate/lib/crc32_tables.h": {
+      "sha256": "2aa0c8590795ab7d2722bdcd1be816d4808b6e7d301b52bd5ed4c5c1c72b996e",
+      "bytes": 28472
+    },
+    "dds_png/vendor/libdeflate/lib/decompress_template.h": {
+      "sha256": "ade3034c1d5c840cb31bd9738a015be804862a8dfce03c14ac2f5b3a826792b8",
+      "bytes": 25048
+    },
+    "dds_png/vendor/libdeflate/lib/deflate_compress.c": {
+      "sha256": "a46dae12f2020b68d20c965ae43f9710e3e792bf77f3ca4611582f8d8d0c9541",
+      "bytes": 138442
+    },
+    "dds_png/vendor/libdeflate/lib/deflate_compress.h": {
+      "sha256": "cd3a74bb22e5358e9571184294b1f3600e2a72bde483485eda242a92bb7124b0",
+      "bytes": 398
+    },
+    "dds_png/vendor/libdeflate/lib/deflate_constants.h": {
+      "sha256": "72ea6e5f0abe53e781203e3f383603a765a768b860a09b3356be36bfd87c8af3",
+      "bytes": 1747
+    },
+    "dds_png/vendor/libdeflate/lib/deflate_decompress.c": {
+      "sha256": "f4299b3a688b5768c3a8790339e47e02a6e6247d3675b0fafe412a1fc9bd995f",
+      "bytes": 49357
+    },
+    "dds_png/vendor/libdeflate/lib/gzip_compress.c": {
+      "sha256": "b92016cf6a5ce34b48e6950d7de68923d2e5e0475bbe4c71297360818deafb08",
+      "bytes": 2665
+    },
+    "dds_png/vendor/libdeflate/lib/gzip_constants.h": {
+      "sha256": "135661faa24f45407517f9f73380cf89890613aeba27b3a4f5cfba0e74e85ae0",
+      "bytes": 1029
+    },
+    "dds_png/vendor/libdeflate/lib/gzip_decompress.c": {
+      "sha256": "f853b8802a1b7e79f6626f0a2c104d005958288c2a37ea24df758ee54f714304",
+      "bytes": 3996
+    },
+    "dds_png/vendor/libdeflate/lib/hc_matchfinder.h": {
+      "sha256": "b37e8c48957f8d7773a847a1d5a5fe5343b85e0f9c43ddce2e55eb24d58a1704",
+      "bytes": 13970
+    },
+    "dds_png/vendor/libdeflate/lib/ht_matchfinder.h": {
+      "sha256": "a682872f0d05919e13d53b49df42039062c177c65d19095da958162425883c0c",
+      "bytes": 7135
+    },
+    "dds_png/vendor/libdeflate/lib/lib_common.h": {
+      "sha256": "e7aa1f2750434e1019ffabda577dab0fdf5b95f010f6f20aa7e21323b3bcceea",
+      "bytes": 3624
+    },
+    "dds_png/vendor/libdeflate/lib/matchfinder_common.h": {
+      "sha256": "47199708cd30c44772fbaed3da4b34533541d6f33ffa7279651a137887756ab3",
+      "bytes": 7032
+    },
+    "dds_png/vendor/libdeflate/lib/utils.c": {
+      "sha256": "3d4c9f6d488610d4d9ff314b2dc783e24079325b78af13d3ee37b18fcc0b0d8a",
+      "bytes": 3425
+    },
+    "dds_png/vendor/libdeflate/lib/zlib_compress.c": {
+      "sha256": "b5ca0c9af0346fd656871441b08b73b3512601ceec8edc6cc81e8a93929081d4",
+      "bytes": 2618
+    },
+    "dds_png/vendor/libdeflate/lib/zlib_constants.h": {
+      "sha256": "562e16b83ac33ac6d351cdfdf1962750576080d65c22ab66cad0aaa33695bebb",
+      "bytes": 488
+    },
+    "dds_png/vendor/libdeflate/lib/zlib_decompress.c": {
+      "sha256": "704a57fb91c36c1c88b04a3482694de08c794ca0cb3904ac247a206802aa6ee0",
+      "bytes": 3138
+    },
+    "dds_png/vendor/libdeflate/lib/arm/adler32_impl.h": {
+      "sha256": "b7e43d7b91db98d774243cf29ee41941edf93e71b5a3f5cc3ede34d8b70a93d9",
+      "bytes": 12336
+    },
+    "dds_png/vendor/libdeflate/lib/arm/cpu_features.c": {
+      "sha256": "ab7fb53d8b5b991200e986f20b66f71549a28bbe54b904f37ef81a4696780048",
+      "bytes": 8329
+    },
+    "dds_png/vendor/libdeflate/lib/arm/cpu_features.h": {
+      "sha256": "0cff5c0110021dc8b18511e328f913f1bad21f31ad927497d1f428db4e6ed239",
+      "bytes": 7107
+    },
+    "dds_png/vendor/libdeflate/lib/arm/crc32_impl.h": {
+      "sha256": "5a24f5087e665b30516f83c2e09a58ed01dab867895a6cefc2f1c833d12482d3",
+      "bytes": 21098
+    },
+    "dds_png/vendor/libdeflate/lib/arm/crc32_pmull_helpers.h": {
+      "sha256": "e469001ad29607cab992ae29c9eaac331427d6b103d11d58d37158b3aa0be95c",
+      "bytes": 5329
+    },
+    "dds_png/vendor/libdeflate/lib/arm/crc32_pmull_wide.h": {
+      "sha256": "c53a58d1e3dc5e75d23c1338fed6cc431ee6fbdfcd4ac94f576579258ac34a88",
+      "bytes": 7401
+    },
+    "dds_png/vendor/libdeflate/lib/arm/matchfinder_impl.h": {
+      "sha256": "11cd6a9c47d2dadf746f7a944c72c672b40bc83b2ffb43356e0b7ced6b6b8038",
+      "bytes": 2463
+    },
+    "dds_png/vendor/libdeflate/lib/riscv/matchfinder_impl.h": {
+      "sha256": "e487458fdc957ba59f9f6d27d6f8997900446df08880018b00d5535a7fc5edc2",
+      "bytes": 3330
+    },
+    "dds_png/vendor/libdeflate/lib/x86/adler32_impl.h": {
+      "sha256": "952c36cd1518d2c0d52d2c1b7ed26c7c32621095f0aaf848bfa0ef42b8299b5c",
+      "bytes": 4981
+    },
+    "dds_png/vendor/libdeflate/lib/x86/adler32_template.h": {
+      "sha256": "8e5d14f8e596bd54bea188b6ff5c96649329beeebd9acdd59307a5202206d11e",
+      "bytes": 17524
+    },
+    "dds_png/vendor/libdeflate/lib/x86/cpu_features.c": {
+      "sha256": "9ed976e4c66478e8b6a8856424816147a971f75894c66f03274ab8119074dde0",
+      "bytes": 6371
+    },
+    "dds_png/vendor/libdeflate/lib/x86/cpu_features.h": {
+      "sha256": "1fa71a4fdf117120a08f3f46990b2cee5d3cbef0610d77fb40d19a0e5387807b",
+      "bytes": 5396
+    },
+    "dds_png/vendor/libdeflate/lib/x86/crc32_impl.h": {
+      "sha256": "ec93c97a3197459ea9d6fa4cb6d39ceeb5f5dd8f649a5f6edce0dccf6947c34c",
+      "bytes": 6111
+    },
+    "dds_png/vendor/libdeflate/lib/x86/crc32_pclmul_template.h": {
+      "sha256": "f0aa09cf49fd77e1f95c360f8edddd3a17725b8ea92f92c70efe50a182f51d72",
+      "bytes": 14493
+    },
+    "dds_png/vendor/libdeflate/lib/x86/decompress_impl.h": {
+      "sha256": "81ab9fd7d4723fdc7ae81dca82f817bcecb7baf5bdfffde0ccfbba70569ac2f1",
+      "bytes": 2190
+    },
+    "dds_png/vendor/libdeflate/lib/x86/matchfinder_impl.h": {
+      "sha256": "3322b5195e11dc08575ea26431d8d16514cb53bf25e6a9b6935b6cec7a678a27",
+      "bytes": 3726
     }
   },
   "production_binaries": {
@@ -67,7 +267,8 @@
     "common/native/herta_geometry_windows_x64.dll": "120a632c49f4ddf552f0902b82a525d61f48d2965830e474a84a15e0a3911d46",
     "common/native/bc7f/herta_png_analysis_windows_x64.dll": "62a99bf1aeff66158c76d20b006bdde3abf80f7384ed748b77b31f608a2ca936",
     "common/native/bc7f/herta_texture_windows_x64.dll": "66cc67fc905acf690dc2667a46fc71de2067938c8bb31beb129850bf702824fa",
-    "common/native/herta_shapekey_windows_x64.dll": "98ecb59416775b57cfacc9a89824fc5fa6795e5f18a576a5d60be3dcfba55517"
+    "common/native/herta_shapekey_windows_x64.dll": "98ecb59416775b57cfacc9a89824fc5fa6795e5f18a576a5d60be3dcfba55517",
+    "common/native/herta_dds_png_windows_x64.dll": "3bef6950ac723e16771b5e29744e67961f43f2c60d1be56e51efb86e49610414"
   },
   "shapekey": {
     "abi": 1,
@@ -79,5 +280,14 @@
     "threads": 4,
     "source_bytes": 5742,
     "dll_bytes": 25088
+  },
+  "dds_png": {
+    "abi": 1,
+    "source_path": "addon_native/dds_png",
+    "source_repository": "https://github.com/v4806/herta-bc7-native",
+    "compiler": "MSVC 14.50 x64 /O2 /MD /std:c11 /fp:precise",
+    "active_file_calls": 8,
+    "png_compression_level": 1,
+    "dll_bytes": 97792
   }
 }

@@ -61,8 +61,15 @@ INLINE unsigned read_bits(Bits *b, unsigned count) {
     return v;
 }
 INLINE unsigned expand(unsigned v, unsigned n) {
+#ifdef HERTA_PNG_STANDARD_ENDPOINTS
+    /* PNG conversion must match the BC7 specification/DirectXTex exactly.
+     * Keep historical analysis-thumbnail rounding in the existing DDS DLL. */
+    unsigned x = v << (8u - n);
+    return x | (x >> n);
+#else
     unsigned x = v * 255u + ((1u << n) - 1u);
     return (x + (x >> n)) >> n;
+#endif
 }
 
 static void decode_block(const uint8_t *src, uint8_t rgba[64]) {

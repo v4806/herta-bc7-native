@@ -27,3 +27,11 @@ the exact production DLL digests, without shipping build intermediates here.
 deltas, and globally aligned half float3 packing. Build with `/fp:precise`;
 Blender/RNA access stays on the calling thread. The DLL is optional and has
 NumPy/evaluated-mesh fallbacks in the addon.
+
+## DDS to PNG pipeline
+
+`dds_png/` adds the optional, reentrant DDS-to-PNG DLL. It combines the Herta
+BC7 decoder (standard endpoint expansion), bcdec BC6H, SSE2 PNG row filters and
+libdeflate in one native call. The existing analysis DLL retains its original
+rounding. HDR remains 16-bit; pixel values and sRGB semantics are preserved.
+See `dds_png/README.md`, `dds_png/VALIDATION.md` and the pinned vendor notices.
