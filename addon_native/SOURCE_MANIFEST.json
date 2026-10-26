@@ -1,8 +1,8 @@
 {
   "source_files": {
     "CMakeLists.txt": {
-      "sha256": "a792129e42f9e0f2a6adadb6ca5ebde3948d69109be525f369df6028459642f3",
-      "bytes": 816
+      "sha256": "2286abf785e102c359ad74e8aee9ea4c1c19fa235b2ff36739cea78359bc2900",
+      "bytes": 1143
     },
     "dds_decode.c": {
       "sha256": "8a6592178d9825515c9b06fd6c1bf341c86a9ba241441964bc80e11adac094f9",
@@ -21,8 +21,8 @@
       "bytes": 1471
     },
     "README.md": {
-      "sha256": "24ce28a58dd70f1c392331d63d5576cb9301f85998da678a7ffc6dc31964d561",
-      "bytes": 1111
+      "sha256": "264d0dfc1da0e9f8aeee64ab61ed44ffd1c863c28776145167fe53d5e6061482",
+      "bytes": 1416
     },
     "bc7f/bc7f_bridge.cpp": {
       "sha256": "0c4154edd33048e046cb6823072a4ec1596073b0faf7069bff25b76258fd24f4",
@@ -55,6 +55,10 @@
     "export_geometry/CMakeLists.txt": {
       "sha256": "5bec151b4a3d4fec13728e85fa8e0ceb6bda7cb6959cf78f6ea823fe97e2ec94",
       "bytes": 569
+    },
+    "shapekey_sample.cpp": {
+      "sha256": "dcbc80ad792f253fafdec3fee70b897e226f4f1e3088ad633b53c9a76dabdd6d",
+      "bytes": 5742
     }
   },
   "production_binaries": {
@@ -62,6 +66,18 @@
     "common/native/herta_export_geometry_windows_x64.dll": "2ecbef44021f87d4a4fafb30ea79b32799716eaf5015284f56d068b0a2291869",
     "common/native/herta_geometry_windows_x64.dll": "120a632c49f4ddf552f0902b82a525d61f48d2965830e474a84a15e0a3911d46",
     "common/native/bc7f/herta_png_analysis_windows_x64.dll": "62a99bf1aeff66158c76d20b006bdde3abf80f7384ed748b77b31f608a2ca936",
-    "common/native/bc7f/herta_texture_windows_x64.dll": "66cc67fc905acf690dc2667a46fc71de2067938c8bb31beb129850bf702824fa"
+    "common/native/bc7f/herta_texture_windows_x64.dll": "66cc67fc905acf690dc2667a46fc71de2067938c8bb31beb129850bf702824fa",
+    "common/native/herta_shapekey_windows_x64.dll": "98ecb59416775b57cfacc9a89824fc5fa6795e5f18a576a5d60be3dcfba55517"
+  },
+  "shapekey": {
+    "abi": 1,
+    "source_repository": "https://github.com/v4806/herta-bc7-native",
+    "source_path": "addon_native/shapekey_sample.cpp",
+    "source_sha256": "dcbc80ad792f253fafdec3fee70b897e226f4f1e3088ad633b53c9a76dabdd6d",
+    "dll_sha256": "98ecb59416775b57cfacc9a89824fc5fa6795e5f18a576a5d60be3dcfba55517",
+    "compiler": "MSVC 14.50 x64 /O2 /MD /EHsc /std:c++20 /fp:precise",
+    "threads": 4,
+    "source_bytes": 5742,
+    "dll_bytes": 25088
   }
 }

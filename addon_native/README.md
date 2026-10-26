@@ -20,3 +20,10 @@ TheHerta4 loads these through ctypes and retains Python/NumPy/texconv fallbacks.
 The repository root license applies to original code. Basis and stb notices are
 retained beside their sources. SOURCE_MANIFEST.json records source SHA256s and
 the exact production DLL digests, without shipping build intermediates here.
+
+## ShapeKey kernels
+
+`shapekey_sample.cpp` adds ABI 1 for batched relative coordinates, packed slot
+deltas, and globally aligned half float3 packing. Build with `/fp:precise`;
+Blender/RNA access stays on the calling thread. The DLL is optional and has
+NumPy/evaluated-mesh fallbacks in the addon.
